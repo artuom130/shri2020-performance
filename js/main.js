@@ -168,6 +168,10 @@ document.querySelectorAll('.panel_floor').forEach(p => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+    Array.from(document.querySelectorAll('.card')).forEach(function(card) {
+        
+    })
+   
     var waterContainer = document.querySelector('.card.card_size_s:last-child');
 
     waterContainer.innerHTML = 
