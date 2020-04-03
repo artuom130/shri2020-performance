@@ -329,7 +329,7 @@ footer {
 .card {
     background: url("../img/cbg.jpg");
     color: #333;
-    border-radius: 20px;
+    border-radius: 23px;
     box-sizing: border-box;
     padding: 0 20px 20px 20px
 }
@@ -501,7 +501,9 @@ footer {
     from {
         transform: scale(0.2);
     }
-to-transform: scale(1);
+    to {
+        transform: scale(1);
+    }
 }
 * {
     box-sizing: border-box;
@@ -712,6 +714,14 @@ html {
     font-size: 24px;
     padding: 24px 50px 0 0;
     margin-bottom: 0
+}
+
+.card_size_s {
+    border-radius: 23px;
+}
+
+.card_size_m {
+    border-radius: 22px;
 }
 
 .description_critical {
