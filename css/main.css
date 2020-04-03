@@ -770,11 +770,6 @@ html {
     width: 100%;
     margin-bottom: -4px
 }
-@media (min-width: 1024px) {
-    .card-data_graph-img {
-        margin-bottom: -3px;
-    }
-}
 
 .card-data_climat {
     font-size: 18px;
