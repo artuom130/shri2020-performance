@@ -51,7 +51,7 @@
           <div class="card card_size_l">
             <div class="card-heading">
               <div class="card-icon-wrap">
-                <img class="card-icon lazy" data-src="img/icons/stats.svg" />
+                <img class="card-icon" src="img/icons/stats.svg" />
               </div>
               <h3 class="card-title">Еженедельный отчет по расходам ресурсов</h3>
             </div>
@@ -74,7 +74,7 @@
           <div class="card card_size_s">
             <div class="card-heading">
               <div class="card-icon-wrap">
-                <img class="card-icon lazy" data-src="img/icons/key.svg" />
+                <img class="card-icon" src="img/icons/key.svg" />
               </div>
               <h3 class="card-title">Дверь открыта</h3>
             </div>
@@ -87,7 +87,7 @@
           <div class="card card_size_s">
             <div class="card-heading">
               <div class="card-icon-wrap">
-                <img class="card-icon lazy" data-src="img/icons/robot-cleaner.svg" />
+                <img class="card-icon" src="img/icons/robot-cleaner.svg" />
               </div>
               <h3 class="card-title">Уборка закончена</h3>
             </div>
@@ -100,7 +100,7 @@
           <div class="card card_size_s">
             <div class="card-heading">
               <div class="card-icon-wrap">
-                <img class="card-icon lazy" data-src="img/icons/router.svg" />
+                <img class="card-icon" src="img/icons/router.svg" />
               </div>
               <h3 class="card-title">Новый пользователь</h3>
             </div>
@@ -113,7 +113,7 @@
           <div class="card card_size_m">
             <div class="card-heading">
               <div class="card-icon-wrap">
-                <img class="card-icon lazy" data-src="img/icons/thermal.svg" />
+                <img class="card-icon" src="img/icons/thermal.svg" />
               </div>
               <h3 class="card-title">Изменен климатический режим</h3>
             </div>
@@ -137,7 +137,7 @@
           <div class="card card_size_m critical">
             <div class="card-heading heading-critical">
               <div class="card-icon-wrap">
-                <img class="card-icon lazy" data-src="img/icons/ac.svg" />
+                <img class="card-icon" src="img/icons/ac.svg" />
               </div>
               <h3 class="card-title">Невозможно включить кондиционер</h3>
             </div>
@@ -153,7 +153,7 @@
           <div class="card card_size_m">
             <div class="card-heading">
               <div class="card-icon-wrap">
-                <img class="card-icon lazy" data-src="img/icons/music.svg" />
+                <img class="card-icon" src="img/icons/music.svg" />
               </div>
               <h3 class="card-title">Музыка включена</h3>
             </div>
@@ -191,10 +191,10 @@
               </div>
               <div class="player-controls">
                 <button class="player-control player-control_prev">
-                  <img class="lazy" data-src="img/icons/Prev.svg" />
+                  <img src="img/icons/Prev.svg" />
                 </button>
                 <button class="player-control player-control_next">
-                  <img class="lazy" data-src="img/icons/Prev.svg" />
+                  <img src="img/icons/Prev.svg" />
                 </button>
 
                 <input type="range" class="volume-range" name="volume-range" min="0" max="100" value="50" step="1" />
@@ -206,7 +206,7 @@
           <div class="card card_size_m">
             <div class="card-heading">
               <div class="card-icon-wrap">
-                <img class="card-icon lazy" data-src="img/icons/fridge.svg" />
+                <img class="card-icon" src="img/icons/fridge.svg" />
               </div>
               <h3 class="card-title">Заканчивается молоко</h3>
             </div>
@@ -226,7 +226,7 @@
           <div class="card card_size_s">
             <div class="card-heading">
               <div class="card-icon-wrap">
-                <img class="card-icon lazy" data-src="img/icons/battery.svg" />
+                <img class="card-icon" src="img/icons/battery.svg" />
               </div>
               <h3 class="card-title">Зарядка завершена</h3>
             </div>
@@ -242,7 +242,7 @@
           <div class="card card_size_l critical">
             <div class="card-heading heading-critical">
               <div class="card-icon-wrap" style="overflow: hidden;">
-                <img class="card-icon lazy" data-src="img/icons/cam.svg" />
+                <img class="card-icon" src="img/icons/cam.svg" />
               </div>
               <h3 class="card-title">Пылесос застрял</h3>
             </div>
@@ -264,7 +264,7 @@
           <div class="card card_size_s">
             <div class="card-heading">
               <div class="card-icon-wrap">
-                <img class="card-icon lazy" data-src="img/icons/kettle.svg" />
+                <img class="card-icon" src="img/icons/kettle.svg" />
               </div>
               <h3 class="card-title">Вода вскипела</h3> 
             </div>
@@ -289,8 +289,6 @@
     </footer>
     <script>
       const e=document.querySelector(".buttons-wrap"),t=document.querySelector(".card_size_m:nth-child(8) .card-description"),c=document.querySelector(".buttons-wrap .button_yellow"),i=document.createElement("div");i.classList.add("purchase-list-wrap"),i.innerHTML='<p class="card-description card-description_big description_critical">Список покупок:</p><ol class="purchase-list"><li class="purchase-list__item">Хлеб</li><li class="purchase-list__item">Молоко</li></ol>',c.onclick=(()=>{t.replaceWith(i),e.style.display="none"});const s=document.querySelector(".header-menu");document.querySelector(".header-menu__switcher").addEventListener("click",function(){s.classList.toggle("header-menu_active")});
-      const defaults={imageLoadedClass:"lazy_loaded",imageSelector:".lazy",rootMargin:"50px 0px",threshold:.01};let config,images,imageCount,observer;function fetchImage(e){return new Promise((o,n)=>{const t=new Image;t.src=e,t.onload=o,t.onerror=n})}function preloadImage(e){const o=e.dataset.src;if(o)return fetchImage(o).then(()=>{applyImage(e,o)})}function loadImagesImmediately(e){for(let o=0;o<e.length;o++){preloadImage(e[o])}}function disconnect(){observer&&observer.disconnect()}function onIntersection(e){if(0!==imageCount)for(let o=0;o<e.length;o++){let n=e[o];n.intersectionRatio>0&&(imageCount--,observer.unobserve(n.target),preloadImage(n.target))}else disconnect()}function applyImage(e,o){e.classList.add(config.imageLoadedClass),e.src=o}let LazyLoad={init:e=>{if(config={...defaults,...e},images=document.querySelectorAll(config.imageSelector),imageCount=images.length,"IntersectionObserver"in window){observer=new IntersectionObserver(onIntersection,config);for(let e=0;e<images.length;e++){let o=images[e];o.classList.contains(config.imageLoadedClass)||observer.observe(o)}}else loadImagesImmediately(images)}};
-      LazyLoad && LazyLoad.init();
     </script>
   </body>
 </html>
