@@ -1,3 +1,17 @@
+@font-face {
+    font-family: OpenSansReg;
+    src: url("../assets/OpenSans-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: OpenSansLight;
+    src: url("../assets/OpenSans-Light.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
     margin: 0;
     padding: 0;
@@ -9,17 +23,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block
-}
-
-@font-face {
-    font-family: OpenSansReg;
-    src: url("../assets/OpenSans-Regular.ttf");
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: OpenSansLight;
-    src: url("../assets/OpenSans-Light.ttf");
 }
 
 body {
@@ -286,10 +289,10 @@ footer {
     width: 1016px;
     margin: 0 auto;
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 400;
     height: 107px;
     line-height: 104px;
-    font-family: OpenSansReg;
+    font-family: OpenSansReg, sans-serif;
 }
 
 .card_size_s {
@@ -344,7 +347,7 @@ html {
     font-weight: 700;
     padding-left: 18px;
     line-height: 27px;
-    font-family: OpenSansLight;
+    font-family: OpenSansLight, sans-serif;
 }
 
 .card-specs {
